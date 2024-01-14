@@ -3,7 +3,7 @@
 <title>Static Call Graph - [24vatom\24vatom.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image 24vatom\24vatom.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6180002: Last Updated: Sun Jan 14 13:30:44 2024
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6180002: Last Updated: Sun Jan 14 16:51:48 2024
 <BR><P>
 <H3>Maximum Stack Usage =        204 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -427,7 +427,7 @@ Global Symbols
 
 <P><STRONG><a name="[c8]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, indicate_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[20]"></a>ADC_Read</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, main.o(.text.ADC_Read))
+<P><STRONG><a name="[20]"></a>ADC_Read</STRONG> (Thumb, 52 bytes, Stack size 0 bytes, main.o(.text.ADC_Read))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = ADC_Read &rArr; osDelay
 </UL>
 <BR>[Calls]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
@@ -624,11 +624,10 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_postsh_1
 </UL>
 
-<P><STRONG><a name="[21]"></a>app_main</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, main.o(.text.app_main))
+<P><STRONG><a name="[21]"></a>app_main</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, main.o(.text.app_main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = app_main &rArr; osThreadNew
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadNew
-<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> main.o(.text.main)
 </UL>
@@ -653,8 +652,7 @@ Global Symbols
 <P><STRONG><a name="[57]"></a>osDelay</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, rtx_delay.o(.text.osDelay))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = osDelay
 </UL>
-<BR>[Called By]<UL><LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;app_main
-<LI><a href="#[20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Read
+<BR>[Called By]<UL><LI><a href="#[20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Read
 <LI><a href="#[1f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_PWM
 </UL>
 

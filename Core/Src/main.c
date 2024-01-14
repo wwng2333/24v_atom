@@ -100,6 +100,8 @@ __NO_RETURN void LED_PWM(void *arg)
 
 __NO_RETURN void ADC_Read(void *arg)
 {
+	//LL_ADC_StartCalibration(ADC1);
+	osDelay(100);
 	while(1)
 	{
 		LL_ADC_REG_StartConversion(ADC1);
@@ -108,15 +110,13 @@ __NO_RETURN void ADC_Read(void *arg)
 			osDelay(10);
 		}
 		ADC_Value = LL_ADC_REG_ReadConversionData12(ADC1);
-		//LL_ADC_ClearFlag_EOS(ADC1);
+		LL_ADC_ClearFlag_EOS(ADC1);
 		osDelay(50);
 	}
 }
 
 void app_main(void *arg)
 {
-	//LL_ADC_StartCalibration(ADC1);
-	osDelay(100);
 	LED_PWM_ID = osThreadNew(LED_PWM, NULL, &ThreadAttr_LED_PWM);
 	ADC_Read_ID = osThreadNew(ADC_Read, NULL, &ThreadAttr_ADC_Read);
 }
