@@ -66,7 +66,7 @@ void SystemClock_Config(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-
+	uint8_t i;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -95,7 +95,8 @@ int main(void)
   MX_TIM16_Init();
   MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
-
+	TIM16_StartPWM();
+	TIM1_StartPWM();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -103,7 +104,11 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+		for(i=0;i<50;i++)
+		{
+			LL_TIM_OC_SetCompareCH1(TIM1, i);
+			LL_mDelay(100);
+		}
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
