@@ -57,15 +57,21 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-osThreadId_t app_main_ID;
+osThreadId_t app_main_ID, LED_PWM_ID;
 
 static const osThreadAttr_t ThreadAttr_app_main =
     {
         .name = "app_main",
         .priority = (osPriority_t)osPriorityNormal,
         .stack_size = 256};
+
+static const osThreadAttr_t ThreadAttr_LED_PWM =
+    {
+        .name = "LED_PWM",
+        .priority = (osPriority_t)osPriorityNormal,
+        .stack_size = 128};
 		
-void app_main(void *arg)
+__NO_RETURN void LED_PWM(void *arg)
 {
 	uint8_t i = 0;
 	while(1)
@@ -73,17 +79,23 @@ void app_main(void *arg)
 		for(i=0;i<50;i++)
 		{
 			LL_TIM_OC_SetCompareCH2(TIM1, i);
-			osDelay(30);
+			osDelay(50);
 		}
-		osDelay(300);
+		osDelay(1000);
 		for(i=50;i>0;i--)
 		{
 			LL_TIM_OC_SetCompareCH2(TIM1, i);
-			osDelay(30);
+			osDelay(50);
 		}
-		osDelay(300);
+		osDelay(1000);
 	}
 }
+
+void app_main(void *arg)
+{
+	LED_PWM_ID = osThreadNew(LED_PWM, NULL, &ThreadAttr_LED_PWM);
+}
+
 /* USER CODE END 0 */
 
 /**
