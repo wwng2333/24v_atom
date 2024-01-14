@@ -24,7 +24,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include <cmsis_os2.h>
+#include "string.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -56,7 +57,33 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+osThreadId_t app_main_ID;
 
+static const osThreadAttr_t ThreadAttr_app_main =
+    {
+        .name = "app_main",
+        .priority = (osPriority_t)osPriorityNormal,
+        .stack_size = 256};
+		
+void app_main(void *arg)
+{
+	uint8_t i = 0;
+	while(1)
+	{
+		for(i=0;i<50;i++)
+		{
+			LL_TIM_OC_SetCompareCH2(TIM1, i);
+			osDelay(30);
+		}
+		osDelay(300);
+		for(i=50;i>0;i--)
+		{
+			LL_TIM_OC_SetCompareCH2(TIM1, i);
+			osDelay(30);
+		}
+		osDelay(300);
+	}
+}
 /* USER CODE END 0 */
 
 /**
@@ -97,6 +124,12 @@ int main(void)
   /* USER CODE BEGIN 2 */
 	TIM16_StartPWM();
 	TIM1_StartPWM();
+	osKernelInitialize();
+  app_main_ID = osThreadNew(app_main, NULL, &ThreadAttr_app_main);
+  if (osKernelGetState() == osKernelReady)
+  {
+    osKernelStart();
+  }
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -104,11 +137,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-		for(i=0;i<50;i++)
-		{
-			LL_TIM_OC_SetCompareCH1(TIM1, i);
-			LL_mDelay(100);
-		}
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

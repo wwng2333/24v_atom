@@ -22,4 +22,7 @@
   ..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_dmamux.h \
   ..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_tim.h \
   ..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_gpio.h \
-  ..\Core\Inc\adc.h ..\Core\Inc\tim.h ..\Core\Inc\gpio.h
+  ..\Core\Inc\adc.h ..\Core\Inc\tim.h ..\Core\Inc\gpio.h \
+  C:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\Include\cmsis_os2.h \
+  C:\Keil_ARM\ARM\ARMCLANG\Bin\..\include\stddef.h \
+  C:\Keil_ARM\ARM\ARMCLANG\Bin\..\include\string.h
