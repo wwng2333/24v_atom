@@ -1,0 +1,17 @@
+*.log
+*.log.lock
+*.axf
+*.html
+*.d
+*.o
+*.iex
+*.sct
+*.dep
+*.lnp
+*.htm
+*.hex
+*.scvd
+/MDK-ARM/24vatom/
+/MDK-ARM/24vatom.uvguix.Administrator
+/MDK-ARM/*.yml
+/MDK-ARM/*.uvoptx
