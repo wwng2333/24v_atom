@@ -57,7 +57,8 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-osThreadId_t app_main_ID, LED_PWM_ID;
+osThreadId_t app_main_ID, LED_PWM_ID, ADC_Read_ID;
+uint16_t ADC_Value;
 
 static const osThreadAttr_t ThreadAttr_app_main =
     {
@@ -70,6 +71,12 @@ static const osThreadAttr_t ThreadAttr_LED_PWM =
         .name = "LED_PWM",
         .priority = (osPriority_t)osPriorityNormal,
         .stack_size = 128};
+
+static const osThreadAttr_t ThreadAttr_ADC_Read =
+    {
+        .name = "ADC_Read",
+        .priority = (osPriority_t)osPriorityNormal,
+        .stack_size = 256};
 		
 __NO_RETURN void LED_PWM(void *arg)
 {
@@ -91,9 +98,27 @@ __NO_RETURN void LED_PWM(void *arg)
 	}
 }
 
+__NO_RETURN void ADC_Read(void *arg)
+{
+	while(1)
+	{
+		LL_ADC_REG_StartConversion(ADC1);
+		while(LL_ADC_IsActiveFlag_EOS(ADC1) == RESET)
+		{
+			osDelay(10);
+		}
+		ADC_Value = LL_ADC_REG_ReadConversionData12(ADC1);
+		//LL_ADC_ClearFlag_EOS(ADC1);
+		osDelay(50);
+	}
+}
+
 void app_main(void *arg)
 {
+	//LL_ADC_StartCalibration(ADC1);
+	osDelay(100);
 	LED_PWM_ID = osThreadNew(LED_PWM, NULL, &ThreadAttr_LED_PWM);
+	ADC_Read_ID = osThreadNew(ADC_Read, NULL, &ThreadAttr_ADC_Read);
 }
 
 /* USER CODE END 0 */
@@ -134,6 +159,7 @@ int main(void)
   MX_TIM16_Init();
   MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
+	LL_ADC_Enable(ADC1);
 	TIM16_StartPWM();
 	TIM1_StartPWM();
 	osKernelInitialize();
