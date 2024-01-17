@@ -14,7 +14,7 @@
 "24vatom\stm32g0xx_ll_pwr.o"
 "24vatom\stm32g0xx_ll_tim.o"
 "24vatom\system_stm32g0xx.o"
-"..\..\..\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\RTX\Library\ARM\RTX_CM0.lib"
+"G:\Keil_ARM\ArmPacks\ARM\CMSIS\5.9.0\CMSIS\RTOS2\RTX\Library\ARM\RTX_CM0.lib"
 "24vatom\rtx_lib.o"
 "24vatom\rtx_config.o"
 --strict --scatter "24vatom\24vatom.sct"

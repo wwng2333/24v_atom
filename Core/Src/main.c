@@ -56,7 +56,7 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-osThreadId_t app_main_ID, LED_PWM_ID, ADC_Read_ID;
+osThreadId_t app_main_ID, LED_PWM_ID, ADC_Read_ID, PZT_Freq_Check_ID;
 uint16_t ADC_Value;
 float ADC_Voltage = 0.0f;
 float ADC_Current = 0.0f;
@@ -76,6 +76,12 @@ static const osThreadAttr_t ThreadAttr_LED_PWM =
 static const osThreadAttr_t ThreadAttr_ADC_Read =
     {
         .name = "ADC_Read",
+        .priority = (osPriority_t)osPriorityNormal,
+        .stack_size = 256};
+
+static const osThreadAttr_t ThreadAttr_PZT_Freq_Check =
+    {
+        .name = "PZT_Freq_Check",
         .priority = (osPriority_t)osPriorityNormal,
         .stack_size = 256};
 		
@@ -113,28 +119,46 @@ __NO_RETURN void ADC_Read(void *arg)
 		
 		ADC_Voltage = 3.3 * (float)ADC_Value / 4096;
 		ADC_Current	= ADC_Voltage / 0.25 * 1000;
-		if(ADC_Current > 1500) 
+		if(ADC_Current > 1000) 
 		{
 			LL_TIM_CC_DisableChannel(TIM16, LL_TIM_CHANNEL_CH1);
 			LL_TIM_DisableCounter(TIM16);
 			LL_TIM_CC_DisableChannel(TIM1, LL_TIM_CHANNEL_CH2);
 			LL_TIM_DisableCounter(TIM1);
-		} 
-		else if(ADC_Current < 20)
-		{
-			LL_TIM_CC_EnableChannel(TIM16, LL_TIM_CHANNEL_CH1);
-			LL_TIM_EnableCounter(TIM16);
-			LL_TIM_CC_EnableChannel(TIM1, LL_TIM_CHANNEL_CH2);
-			LL_TIM_EnableCounter(TIM1);
+//		} 
+//		else if(ADC_Current < 20)
+//		{
+//			LL_TIM_CC_EnableChannel(TIM16, LL_TIM_CHANNEL_CH1);
+//			LL_TIM_EnableCounter(TIM16);
+//			LL_TIM_CC_EnableChannel(TIM1, LL_TIM_CHANNEL_CH2);
+//			LL_TIM_EnableCounter(TIM1);
 		}
 		osDelay(25);
 	}
+}
+
+__NO_RETURN void PZT_Freq_Check(void *arg)
+{
+	uint8_t arr = 0, best_arr = 0;
+	float max_current = 0.0f;
+	for(arr = 35; arr<= 40; arr++)
+	{
+		LL_TIM_SetAutoReload(TIM16, arr);
+		osDelay(50);
+		if(ADC_Current > max_current)
+		{
+			max_current = ADC_Current;
+			best_arr = arr;
+		}
+	}
+	LL_TIM_SetAutoReload(TIM16, best_arr);
 }
 
 void app_main(void *arg)
 {
 	LED_PWM_ID = osThreadNew(LED_PWM, NULL, &ThreadAttr_LED_PWM);
 	ADC_Read_ID = osThreadNew(ADC_Read, NULL, &ThreadAttr_ADC_Read);
+	PZT_Freq_Check_ID = osThreadNew(PZT_Freq_Check, NULL, &ThreadAttr_PZT_Freq_Check);
 }
 
 /* USER CODE END 0 */
