@@ -46,7 +46,6 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -59,6 +58,8 @@ void SystemClock_Config(void);
 /* USER CODE BEGIN 0 */
 osThreadId_t app_main_ID, LED_PWM_ID, ADC_Read_ID;
 uint16_t ADC_Value;
+float ADC_Voltage = 0.0f;
+float ADC_Current = 0.0f;
 
 static const osThreadAttr_t ThreadAttr_app_main =
     {
@@ -100,8 +101,6 @@ __NO_RETURN void LED_PWM(void *arg)
 
 __NO_RETURN void ADC_Read(void *arg)
 {
-	//LL_ADC_StartCalibration(ADC1);
-	osDelay(100);
 	while(1)
 	{
 		LL_ADC_REG_StartConversion(ADC1);
@@ -111,6 +110,9 @@ __NO_RETURN void ADC_Read(void *arg)
 		}
 		ADC_Value = LL_ADC_REG_ReadConversionData12(ADC1);
 		LL_ADC_ClearFlag_EOS(ADC1);
+		
+		ADC_Voltage = 3.3 * (float)ADC_Value / 4096;
+		ADC_Current	= ADC_Voltage / 0.25 * 1000;
 		osDelay(50);
 	}
 }
@@ -130,7 +132,6 @@ void app_main(void *arg)
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-	uint8_t i;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -150,7 +151,7 @@ int main(void)
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
-	LL_ADC_DeInit(ADC1);
+	//LL_ADC_DeInit(ADC1);
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
