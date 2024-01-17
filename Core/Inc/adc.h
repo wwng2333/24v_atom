@@ -37,6 +37,7 @@ extern "C" {
 /* USER CODE END Private defines */
 
 void MX_ADC1_Init(void);
+void Activate_ADC(void);
 
 /* USER CODE BEGIN Prototypes */
 

@@ -150,7 +150,7 @@ int main(void)
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
-
+	LL_ADC_DeInit(ADC1);
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
@@ -159,7 +159,7 @@ int main(void)
   MX_TIM16_Init();
   MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
-	LL_ADC_Enable(ADC1);
+	Activate_ADC();
 	TIM16_StartPWM();
 	TIM1_StartPWM();
 	osKernelInitialize();
