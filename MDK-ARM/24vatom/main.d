@@ -25,4 +25,7 @@
   ..\Core\Inc\adc.h ..\Core\Inc\tim.h ..\Core\Inc\gpio.h \
   G:\Keil_ARM\ArmPacks\ARM\CMSIS\5.9.0\CMSIS\RTOS2\Include\cmsis_os2.h \
   G:\Keil_ARM\ARM\ARMCLANG\Bin\..\include\stddef.h \
-  G:\Keil_ARM\ARM\ARMCLANG\Bin\..\include\string.h
+  G:\Keil_ARM\ARM\ARMCLANG\Bin\..\include\string.h \
+  ..\Core\Inc\SEGGER_RTT.h ..\Core\Inc\SEGGER_RTT_Conf.h \
+  G:\Keil_ARM\ARM\ARMCLANG\Bin\..\include\stdlib.h \
+  G:\Keil_ARM\ARM\ARMCLANG\Bin\..\include\stdarg.h

@@ -26,6 +26,7 @@
 /* USER CODE BEGIN Includes */
 #include <cmsis_os2.h>
 #include "string.h"
+#include "SEGGER_RTT.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -125,6 +126,7 @@ __NO_RETURN void ADC_Read(void *arg)
 			LL_TIM_DisableCounter(TIM16);
 			LL_TIM_CC_DisableChannel(TIM1, LL_TIM_CHANNEL_CH2);
 			LL_TIM_DisableCounter(TIM1);
+			SEGGER_RTT_printf(0, "Stop due to Current %.2f mA\r\n", ADC_Current);
 //		} 
 //		else if(ADC_Current < 20)
 //		{
@@ -137,25 +139,31 @@ __NO_RETURN void ADC_Read(void *arg)
 	}
 }
 
-__NO_RETURN void PZT_Freq_Check(void *arg)
+void PZT_Freq_Check(void *arg)
 {
 	uint8_t arr = 0, best_arr = 0;
-	float max_current = 0.0f;
-	for(arr = 35; arr<= 40; arr++)
+	float max_current = 0.0f, current_now = 0.0f;
+	SEGGER_RTT_printf(0, "Start PZT_Freq_Check\r\n");
+	for(arr = 35; arr <= 40; arr++)
 	{
 		LL_TIM_SetAutoReload(TIM16, arr);
 		osDelay(50);
-		if(ADC_Current > max_current)
+		current_now = ADC_Current;
+		if(current_now > max_current)
 		{
-			max_current = ADC_Current;
+			max_current = current_now;
 			best_arr = arr;
 		}
+		SEGGER_RTT_printf(0, "arr = %d, current = %.2f\r\n", arr, current_now);
 	}
 	LL_TIM_SetAutoReload(TIM16, best_arr);
+	SEGGER_RTT_printf(0, "PZT_Freq_Check done\r\n");
+	SEGGER_RTT_printf(0, "best_arr = %d, max_current = %.2f\r\n", best_arr, max_current);
 }
 
 void app_main(void *arg)
 {
+	SEGGER_RTT_Init();
 	LED_PWM_ID = osThreadNew(LED_PWM, NULL, &ThreadAttr_LED_PWM);
 	ADC_Read_ID = osThreadNew(ADC_Read, NULL, &ThreadAttr_ADC_Read);
 	PZT_Freq_Check_ID = osThreadNew(PZT_Freq_Check, NULL, &ThreadAttr_PZT_Freq_Check);
