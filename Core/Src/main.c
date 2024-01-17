@@ -113,7 +113,21 @@ __NO_RETURN void ADC_Read(void *arg)
 		
 		ADC_Voltage = 3.3 * (float)ADC_Value / 4096;
 		ADC_Current	= ADC_Voltage / 0.25 * 1000;
-		osDelay(50);
+		if(ADC_Current > 1500) 
+		{
+			LL_TIM_CC_DisableChannel(TIM16, LL_TIM_CHANNEL_CH1);
+			LL_TIM_DisableCounter(TIM16);
+			LL_TIM_CC_DisableChannel(TIM1, LL_TIM_CHANNEL_CH2);
+			LL_TIM_DisableCounter(TIM1);
+		} 
+		else if(ADC_Current < 20)
+		{
+			LL_TIM_CC_EnableChannel(TIM16, LL_TIM_CHANNEL_CH1);
+			LL_TIM_EnableCounter(TIM16);
+			LL_TIM_CC_EnableChannel(TIM1, LL_TIM_CHANNEL_CH2);
+			LL_TIM_EnableCounter(TIM1);
+		}
+		osDelay(25);
 	}
 }
 
