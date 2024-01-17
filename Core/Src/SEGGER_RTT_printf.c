@@ -436,6 +436,23 @@ int SEGGER_RTT_vprintf(unsigned BufferIndex, const char * sFormat, va_list * pPa
       case '%':
         _StoreChar(&BufferDesc, '%');
         break;
+			case 'f':
+			case 'F':
+        {
+            float fv;
+            fv = (float)va_arg(*pParamList, double);    //?????????
+            
+			if(fv < 0) _StoreChar(&BufferDesc, '-');          // ????,??????
+            
+            v = abs((int)fv);                                //?????
+
+            _PrintInt(&BufferDesc, v, 10u, NumDigits, FieldWidth, FormatFlags); //????
+            _StoreChar(&BufferDesc, '.');                                        //?????
+
+            v = abs((int)(fv * 1000));               
+            v = v % 1000;
+            _PrintInt(&BufferDesc, v, 10u, 3, FieldWidth, FormatFlags);          //????????
+        }
       default:
         break;
       }
