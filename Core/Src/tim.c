@@ -172,4 +172,18 @@ void TIM1_StartPWM(void)
 	LL_TIM_EnableCounter(TIM1);
 	LL_TIM_EnableAllOutputs(TIM1);
 }
+
+void TIM16_StopPWM(void)
+{
+	LL_TIM_CC_DisableChannel(TIM16, LL_TIM_CHANNEL_CH1);
+	LL_TIM_DisableCounter(TIM16);
+	LL_TIM_DisableAllOutputs(TIM16);
+}
+
+void TIM1_StopPWM(void)
+{
+	LL_TIM_CC_DisableChannel(TIM1, LL_TIM_CHANNEL_CH2);
+	LL_TIM_DisableCounter(TIM1);
+	LL_TIM_DisableAllOutputs(TIM1);
+}
 /* USER CODE END 1 */
