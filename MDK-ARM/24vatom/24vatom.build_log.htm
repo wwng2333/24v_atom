@@ -3,34 +3,34 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Tool Versions:</h2>
-IDE-Version: ¦ÌVision V5.38.0.0
+IDE-Version: ¦ÌVision V5.37.0.0
 Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: Robin Lu, USTS, LIC=14HV2-9BT16-01MP1-C434X-1NV0S-SDAYZ
+License Information: Lu Robin, USTS, LIC=9WSKC-73MZQ-BS2YX-HGFSI-74GU7-4FSRV
  
 Tool Versions:
-Toolchain:       MDK-ARM Plus  Version: 5.38.0.0
-Toolchain Path:  G:\Keil_ARM\ARM\ARMCLANG\Bin
-C Compiler:      ArmClang.exe V6.19
-Assembler:       Armasm.exe V6.19
-Linker/Locator:  ArmLink.exe V6.19
-Library Manager: ArmAr.exe V6.19
-Hex Converter:   FromElf.exe V6.19
-CPU DLL:         SARMCM3.DLL V5.38.0.0
+Toolchain:       MDK-ARM Plus  Version: 5.37.0.0
+Toolchain Path:  C:\Keil_ARM\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.18
+Assembler:       Armasm.exe V6.18
+Linker/Locator:  ArmLink.exe V6.18
+Library Manager: ArmAr.exe V6.18
+Hex Converter:   FromElf.exe V6.18
+CPU DLL:         SARMCM3.DLL V5.37.0.0
 Dialog DLL:      DARMCM1.DLL V1.19.6.0
-Target DLL:      CMSIS_AGDI.dll V1.33.15.0
+Target DLL:      CMSIS_AGDI.dll V1.33.12.0
 Dialog DLL:      TARMCM1.DLL V1.14.6.0
  
 <h2>Project:</h2>
-C:\Users\Robin Lu\Desktop\24v_atom\MDK-ARM\24vatom.uvprojx
-Project File Date:  01/17/2024
+C:\Users\Administrator\Desktop\24v_atom\MDK-ARM\24vatom.uvprojx
+Project File Date:  01/18/2024
 
 <h2>Output:</h2>
-*** Using Compiler 'V6.19', folder: 'G:\Keil_ARM\ARM\ARMCLANG\Bin'
+*** Using Compiler 'V6.18', folder: 'C:\Keil_ARM\ARM\ARMCLANG\Bin'
 Build target '24vatom'
 compiling system_stm32g0xx.c...
-compiling main.c...
+compiling tim.c...
 linking...
-Program Size: Code=15292 RO-data=720 RW-data=168 ZI-data=7824  
+Program Size: Code=11764 RO-data=668 RW-data=168 ZI-data=7816  
 FromELF: creating hex file...
 "24vatom\24vatom.axf" - 0 Error(s), 0 Warning(s).
 
@@ -53,10 +53,10 @@ Package Vendor: Keil
 <h2>Collection of Component include folders:</h2>
   ./RTE/CMSIS
   ./RTE/_24vatom
-  G:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include
-  G:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include
-  G:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include
-  G:/Keil_ARM/ArmPacks/Keil/STM32G0xx_DFP/1.4.0/Drivers/CMSIS/Device/ST/STM32G0xx/Include
+  C:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include
+  C:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include
+  C:/Users/Administrator/AppData/Local/Arm/Packs/Keil/STM32G0xx_DFP/1.4.0/Drivers/CMSIS/Device/ST/STM32G0xx/Include
 
 <h2>Collection of Component Files used:</h2>
 
@@ -67,26 +67,26 @@ Package Vendor: Keil
       Include file:  CMSIS/Core/Include/tz_context.h
 
    * Component: ARM::CMSIS:RTOS2:Keil RTX5:Library:5.5.4
-      Include file:  CMSIS/RTOS2/RTX/Include/rtx_os.h
-      Include file:  CMSIS/RTOS2/RTX/Config/RTX_Config.h
-      Source file:   CMSIS/RTOS2/RTX/Config/RTX_Config.c
       Source file:   CMSIS/RTOS2/RTX/Template/main.c
-      Source file:   CMSIS/RTOS2/RTX/Template/Events.c
-      Source file:   CMSIS/RTOS2/RTX/Template/MsgQueue.c
       Source file:   CMSIS/RTOS2/RTX/Template/Mutex.c
-      Source file:   CMSIS/RTOS2/RTX/Template/Semaphore.c
-      Source file:   CMSIS/RTOS2/RTX/Template/MemPool.c
-      Library file:  CMSIS/RTOS2/RTX/Library/ARM/RTX_CM0.lib
       Source file:   CMSIS/RTOS2/RTX/Template/Thread.c
-      Source file:   CMSIS/RTOS2/RTX/Template/svc_user.c
+      Include file:  CMSIS/RTOS2/RTX/Config/RTX_Config.h
       Source file:   CMSIS/RTOS2/RTX/Source/rtx_lib.c
+      Library file:  CMSIS/RTOS2/RTX/Library/ARM/RTX_CM0.lib
+      Source file:   CMSIS/RTOS2/RTX/Template/MemPool.c
+      Source file:   CMSIS/RTOS2/RTX/Template/MsgQueue.c
+      Source file:   CMSIS/RTOS2/RTX/Template/Semaphore.c
+      Source file:   CMSIS/RTOS2/RTX/Template/Events.c
       Source file:   CMSIS/RTOS2/RTX/Template/Timer.c
+      Source file:   CMSIS/RTOS2/RTX/Template/svc_user.c
+      Include file:  CMSIS/RTOS2/RTX/Include/rtx_os.h
+      Source file:   CMSIS/RTOS2/RTX/Config/RTX_Config.c
 
    * Component: Keil::Device:Startup:1.4.0
       Source file:   MDK/Device/Source/ARM/STM32G0x0_SB_OPT.s
-      Include file:  Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g0xx.h
-      Source file:   MDK/Device/Source/ARM/STM32G0x0_DB_OPT.s
       Source file:   Drivers/CMSIS/Device/ST/STM32G0xx/Source/Templates/arm/startup_stm32g030xx.s
+      Source file:   MDK/Device/Source/ARM/STM32G0x0_DB_OPT.s
+      Include file:  Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g0xx.h
       Source file:   Drivers/CMSIS/Device/ST/STM32G0xx/Source/Templates/system_stm32g0xx.c
 Build Time Elapsed:  00:00:01
 </pre>

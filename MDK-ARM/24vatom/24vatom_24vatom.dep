@@ -1,314 +1,314 @@
 Dependencies for Project '24vatom', Target '24vatom': (DO NOT MODIFY !)
-CompilerVersion: 6190000::V6.19::ARMCLANG
-F (startup_stm32g030xx.s)(0x65A7BAB0)(--target=arm-arm-none-eabi -mcpu=cortex-m0plus -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c-gdwarf-4 -Wa,armasm,--pd,"__RTX SETA 1"-I./RTE/CMSIS-I./RTE/_24vatom-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include-IG:/Keil_ARM/ArmPacks/Keil/STM32G0xx_DFP/1.4.0/Drivers/CMSIS/Device/ST/STM32G0xx/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 538" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"STM32G030xx SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o 24vatom/startup_stm32g030xx.o)
-F (../Core/Src/main.c)(0x65A7E180)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__RTX -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/CMSIS-I./RTE/_24vatom-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include-IG:/Keil_ARM/ArmPacks/Keil/STM32G0xx_DFP/1.4.0/Drivers/CMSIS/Device/ST/STM32G0xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G030xx -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G030xx-o 24vatom/main.o -MD)
-I (..\Core\Inc\main.h)(0x65A7BAAF)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_adc.h)(0x65A7BAB0)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g0xx.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g030xx.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\core_cm0plus.h)(0x65A7BAAF)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\stdint.h)(0x63884908)
-I (..\Drivers\CMSIS\Include\cmsis_version.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\cmsis_armclang.h)(0x65A7BAAF)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\arm_compat.h)(0x63884908)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\arm_acle.h)(0x63884908)
-I (..\Drivers\CMSIS\Include\mpu_armv7.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\system_stm32g0xx.h)(0x65A7BAAF)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_rcc.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_bus.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_system.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_exti.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_cortex.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_utils.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_pwr.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_dma.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_dmamux.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_tim.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_gpio.h)(0x65A7BAB0)
-I (..\Core\Inc\adc.h)(0x65A7BAAF)
-I (..\Core\Inc\tim.h)(0x65A7D851)
-I (..\Core\Inc\gpio.h)(0x65A7BAAF)
-I (G:\Keil_ARM\ArmPacks\ARM\CMSIS\5.9.0\CMSIS\RTOS2\Include\cmsis_os2.h)(0x626F4ADE)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\stddef.h)(0x63884908)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\string.h)(0x63884908)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\stdio.h)(0x63884908)
-I (..\Core\Inc\SEGGER_RTT.h)(0x649D89EA)
-I (..\Core\Inc\SEGGER_RTT_Conf.h)(0x65A7DB9C)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\stdlib.h)(0x63884908)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\stdarg.h)(0x63884908)
-F (../Core/Src/gpio.c)(0x65A7BAAF)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__RTX -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/CMSIS-I./RTE/_24vatom-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include-IG:/Keil_ARM/ArmPacks/Keil/STM32G0xx_DFP/1.4.0/Drivers/CMSIS/Device/ST/STM32G0xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G030xx -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G030xx-o 24vatom/gpio.o -MD)
-I (..\Core\Inc\gpio.h)(0x65A7BAAF)
-I (..\Core\Inc\main.h)(0x65A7BAAF)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_adc.h)(0x65A7BAB0)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g0xx.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g030xx.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\core_cm0plus.h)(0x65A7BAAF)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\stdint.h)(0x63884908)
-I (..\Drivers\CMSIS\Include\cmsis_version.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\cmsis_armclang.h)(0x65A7BAAF)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\arm_compat.h)(0x63884908)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\arm_acle.h)(0x63884908)
-I (..\Drivers\CMSIS\Include\mpu_armv7.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\system_stm32g0xx.h)(0x65A7BAAF)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_rcc.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_bus.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_system.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_exti.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_cortex.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_utils.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_pwr.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_dma.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_dmamux.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_tim.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_gpio.h)(0x65A7BAB0)
-F (../Core/Src/adc.c)(0x65A7BAAF)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__RTX -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/CMSIS-I./RTE/_24vatom-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include-IG:/Keil_ARM/ArmPacks/Keil/STM32G0xx_DFP/1.4.0/Drivers/CMSIS/Device/ST/STM32G0xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G030xx -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G030xx-o 24vatom/adc.o -MD)
-I (..\Core\Inc\adc.h)(0x65A7BAAF)
-I (..\Core\Inc\main.h)(0x65A7BAAF)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_adc.h)(0x65A7BAB0)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g0xx.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g030xx.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\core_cm0plus.h)(0x65A7BAAF)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\stdint.h)(0x63884908)
-I (..\Drivers\CMSIS\Include\cmsis_version.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\cmsis_armclang.h)(0x65A7BAAF)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\arm_compat.h)(0x63884908)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\arm_acle.h)(0x63884908)
-I (..\Drivers\CMSIS\Include\mpu_armv7.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\system_stm32g0xx.h)(0x65A7BAAF)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_rcc.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_bus.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_system.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_exti.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_cortex.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_utils.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_pwr.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_dma.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_dmamux.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_tim.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_gpio.h)(0x65A7BAB0)
-F (../Core/Src/tim.c)(0x65A7D843)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__RTX -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/CMSIS-I./RTE/_24vatom-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include-IG:/Keil_ARM/ArmPacks/Keil/STM32G0xx_DFP/1.4.0/Drivers/CMSIS/Device/ST/STM32G0xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G030xx -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G030xx-o 24vatom/tim.o -MD)
-I (..\Core\Inc\tim.h)(0x65A7D851)
-I (..\Core\Inc\main.h)(0x65A7BAAF)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_adc.h)(0x65A7BAB0)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g0xx.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g030xx.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\core_cm0plus.h)(0x65A7BAAF)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\stdint.h)(0x63884908)
-I (..\Drivers\CMSIS\Include\cmsis_version.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\cmsis_armclang.h)(0x65A7BAAF)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\arm_compat.h)(0x63884908)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\arm_acle.h)(0x63884908)
-I (..\Drivers\CMSIS\Include\mpu_armv7.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\system_stm32g0xx.h)(0x65A7BAAF)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_rcc.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_bus.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_system.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_exti.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_cortex.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_utils.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_pwr.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_dma.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_dmamux.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_tim.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_gpio.h)(0x65A7BAB0)
-F (../Core/Src/stm32g0xx_it.c)(0x65A7BAAF)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__RTX -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/CMSIS-I./RTE/_24vatom-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include-IG:/Keil_ARM/ArmPacks/Keil/STM32G0xx_DFP/1.4.0/Drivers/CMSIS/Device/ST/STM32G0xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G030xx -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G030xx-o 24vatom/stm32g0xx_it.o -MD)
-I (..\Core\Inc\main.h)(0x65A7BAAF)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_adc.h)(0x65A7BAB0)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g0xx.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g030xx.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\core_cm0plus.h)(0x65A7BAAF)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\stdint.h)(0x63884908)
-I (..\Drivers\CMSIS\Include\cmsis_version.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\cmsis_armclang.h)(0x65A7BAAF)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\arm_compat.h)(0x63884908)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\arm_acle.h)(0x63884908)
-I (..\Drivers\CMSIS\Include\mpu_armv7.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\system_stm32g0xx.h)(0x65A7BAAF)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_rcc.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_bus.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_system.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_exti.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_cortex.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_utils.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_pwr.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_dma.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_dmamux.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_tim.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_gpio.h)(0x65A7BAB0)
-I (..\Core\Inc\stm32g0xx_it.h)(0x65A7BAAF)
-F (..\Core\Src\SEGGER_RTT.c)(0x649D885A)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__RTX -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/CMSIS-I./RTE/_24vatom-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include-IG:/Keil_ARM/ArmPacks/Keil/STM32G0xx_DFP/1.4.0/Drivers/CMSIS/Device/ST/STM32G0xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G030xx -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G030xx-o 24vatom/segger_rtt.o -MD)
-I (..\Core\Inc\SEGGER_RTT.h)(0x649D89EA)
-I (..\Core\Inc\SEGGER_RTT_Conf.h)(0x65A7DB9C)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\stdlib.h)(0x63884908)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\stdarg.h)(0x63884908)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\string.h)(0x63884908)
-F (..\Core\Src\SEGGER_RTT_printf.c)(0x65A7D914)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__RTX -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/CMSIS-I./RTE/_24vatom-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include-IG:/Keil_ARM/ArmPacks/Keil/STM32G0xx_DFP/1.4.0/Drivers/CMSIS/Device/ST/STM32G0xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G030xx -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G030xx-o 24vatom/segger_rtt_printf.o -MD)
-I (..\Core\Inc\SEGGER_RTT.h)(0x649D89EA)
-I (..\Core\Inc\SEGGER_RTT_Conf.h)(0x65A7DB9C)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\stdlib.h)(0x63884908)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\stdarg.h)(0x63884908)
-F (../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_utils.c)(0x65A7BAB0)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__RTX -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/CMSIS-I./RTE/_24vatom-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include-IG:/Keil_ARM/ArmPacks/Keil/STM32G0xx_DFP/1.4.0/Drivers/CMSIS/Device/ST/STM32G0xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G030xx -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G030xx-o 24vatom/stm32g0xx_ll_utils.o -MD)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_utils.h)(0x65A7BAB0)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g0xx.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g030xx.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\core_cm0plus.h)(0x65A7BAAF)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\stdint.h)(0x63884908)
-I (..\Drivers\CMSIS\Include\cmsis_version.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\cmsis_armclang.h)(0x65A7BAAF)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\arm_compat.h)(0x63884908)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\arm_acle.h)(0x63884908)
-I (..\Drivers\CMSIS\Include\mpu_armv7.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\system_stm32g0xx.h)(0x65A7BAAF)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_rcc.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_system.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_pwr.h)(0x65A7BAB0)
-F (../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_exti.c)(0x65A7BAB0)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__RTX -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/CMSIS-I./RTE/_24vatom-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include-IG:/Keil_ARM/ArmPacks/Keil/STM32G0xx_DFP/1.4.0/Drivers/CMSIS/Device/ST/STM32G0xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G030xx -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G030xx-o 24vatom/stm32g0xx_ll_exti.o -MD)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_exti.h)(0x65A7BAB0)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g0xx.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g030xx.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\core_cm0plus.h)(0x65A7BAAF)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\stdint.h)(0x63884908)
-I (..\Drivers\CMSIS\Include\cmsis_version.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\cmsis_armclang.h)(0x65A7BAAF)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\arm_compat.h)(0x63884908)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\arm_acle.h)(0x63884908)
-I (..\Drivers\CMSIS\Include\mpu_armv7.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\system_stm32g0xx.h)(0x65A7BAAF)
-F (../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_gpio.c)(0x65A7BAB0)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__RTX -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/CMSIS-I./RTE/_24vatom-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include-IG:/Keil_ARM/ArmPacks/Keil/STM32G0xx_DFP/1.4.0/Drivers/CMSIS/Device/ST/STM32G0xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G030xx -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G030xx-o 24vatom/stm32g0xx_ll_gpio.o -MD)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_gpio.h)(0x65A7BAB0)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g0xx.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g030xx.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\core_cm0plus.h)(0x65A7BAAF)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\stdint.h)(0x63884908)
-I (..\Drivers\CMSIS\Include\cmsis_version.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\cmsis_armclang.h)(0x65A7BAAF)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\arm_compat.h)(0x63884908)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\arm_acle.h)(0x63884908)
-I (..\Drivers\CMSIS\Include\mpu_armv7.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\system_stm32g0xx.h)(0x65A7BAAF)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_bus.h)(0x65A7BAB0)
-F (../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_adc.c)(0x65A7BAB0)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__RTX -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/CMSIS-I./RTE/_24vatom-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include-IG:/Keil_ARM/ArmPacks/Keil/STM32G0xx_DFP/1.4.0/Drivers/CMSIS/Device/ST/STM32G0xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G030xx -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G030xx-o 24vatom/stm32g0xx_ll_adc.o -MD)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_adc.h)(0x65A7BAB0)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g0xx.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g030xx.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\core_cm0plus.h)(0x65A7BAAF)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\stdint.h)(0x63884908)
-I (..\Drivers\CMSIS\Include\cmsis_version.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\cmsis_armclang.h)(0x65A7BAAF)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\arm_compat.h)(0x63884908)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\arm_acle.h)(0x63884908)
-I (..\Drivers\CMSIS\Include\mpu_armv7.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\system_stm32g0xx.h)(0x65A7BAAF)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_bus.h)(0x65A7BAB0)
-F (../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_dma.c)(0x65A7BAB0)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__RTX -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/CMSIS-I./RTE/_24vatom-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include-IG:/Keil_ARM/ArmPacks/Keil/STM32G0xx_DFP/1.4.0/Drivers/CMSIS/Device/ST/STM32G0xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G030xx -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G030xx-o 24vatom/stm32g0xx_ll_dma.o -MD)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_dma.h)(0x65A7BAB0)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g0xx.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g030xx.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\core_cm0plus.h)(0x65A7BAAF)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\stdint.h)(0x63884908)
-I (..\Drivers\CMSIS\Include\cmsis_version.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\cmsis_armclang.h)(0x65A7BAAF)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\arm_compat.h)(0x63884908)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\arm_acle.h)(0x63884908)
-I (..\Drivers\CMSIS\Include\mpu_armv7.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\system_stm32g0xx.h)(0x65A7BAAF)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_dmamux.h)(0x65A7BAB0)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_bus.h)(0x65A7BAB0)
-F (../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.c)(0x65A7BAB0)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__RTX -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/CMSIS-I./RTE/_24vatom-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include-IG:/Keil_ARM/ArmPacks/Keil/STM32G0xx_DFP/1.4.0/Drivers/CMSIS/Device/ST/STM32G0xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G030xx -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G030xx-o 24vatom/stm32g0xx_ll_rcc.o -MD)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_rcc.h)(0x65A7BAB0)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g0xx.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g030xx.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\core_cm0plus.h)(0x65A7BAAF)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\stdint.h)(0x63884908)
-I (..\Drivers\CMSIS\Include\cmsis_version.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\cmsis_armclang.h)(0x65A7BAAF)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\arm_compat.h)(0x63884908)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\arm_acle.h)(0x63884908)
-I (..\Drivers\CMSIS\Include\mpu_armv7.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\system_stm32g0xx.h)(0x65A7BAAF)
-F (../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_pwr.c)(0x65A7BAB0)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__RTX -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/CMSIS-I./RTE/_24vatom-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include-IG:/Keil_ARM/ArmPacks/Keil/STM32G0xx_DFP/1.4.0/Drivers/CMSIS/Device/ST/STM32G0xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G030xx -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G030xx-o 24vatom/stm32g0xx_ll_pwr.o -MD)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_pwr.h)(0x65A7BAB0)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g0xx.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g030xx.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\core_cm0plus.h)(0x65A7BAAF)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\stdint.h)(0x63884908)
-I (..\Drivers\CMSIS\Include\cmsis_version.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\cmsis_armclang.h)(0x65A7BAAF)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\arm_compat.h)(0x63884908)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\arm_acle.h)(0x63884908)
-I (..\Drivers\CMSIS\Include\mpu_armv7.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\system_stm32g0xx.h)(0x65A7BAAF)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_bus.h)(0x65A7BAB0)
-F (../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_tim.c)(0x65A7BAB0)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__RTX -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/CMSIS-I./RTE/_24vatom-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include-IG:/Keil_ARM/ArmPacks/Keil/STM32G0xx_DFP/1.4.0/Drivers/CMSIS/Device/ST/STM32G0xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G030xx -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G030xx-o 24vatom/stm32g0xx_ll_tim.o -MD)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_tim.h)(0x65A7BAB0)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g0xx.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g030xx.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\core_cm0plus.h)(0x65A7BAAF)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\stdint.h)(0x63884908)
-I (..\Drivers\CMSIS\Include\cmsis_version.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\cmsis_armclang.h)(0x65A7BAAF)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\arm_compat.h)(0x63884908)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\arm_acle.h)(0x63884908)
-I (..\Drivers\CMSIS\Include\mpu_armv7.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\system_stm32g0xx.h)(0x65A7BAAF)
-I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_bus.h)(0x65A7BAB0)
-F (../Core/Src/system_stm32g0xx.c)(0x65A7BAAF)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__RTX -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/CMSIS-I./RTE/_24vatom-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include-IG:/Keil_ARM/ArmPacks/Keil/STM32G0xx_DFP/1.4.0/Drivers/CMSIS/Device/ST/STM32G0xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G030xx -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G030xx-o 24vatom/system_stm32g0xx.o -MD)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g0xx.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g030xx.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\core_cm0plus.h)(0x65A7BAAF)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\stdint.h)(0x63884908)
-I (..\Drivers\CMSIS\Include\cmsis_version.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\cmsis_armclang.h)(0x65A7BAAF)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\arm_compat.h)(0x63884908)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\arm_acle.h)(0x63884908)
-I (..\Drivers\CMSIS\Include\mpu_armv7.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\system_stm32g0xx.h)(0x65A7BAAF)
-F (G:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Library/ARM/RTX_CM0.lib)(0x626F4ADE)()
-F (G:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Source/rtx_lib.c)(0x626F4ADE)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__RTX -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/CMSIS-I./RTE/_24vatom-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include-IG:/Keil_ARM/ArmPacks/Keil/STM32G0xx_DFP/1.4.0/Drivers/CMSIS/Device/ST/STM32G0xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G030xx -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G030xx-o 24vatom/rtx_lib.o -MD)
-I (G:\Keil_ARM\ArmPacks\ARM\CMSIS\5.9.0\CMSIS\RTOS2\RTX\Include\rtx_os.h)(0x626F4ADE)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\stdint.h)(0x63884908)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\stddef.h)(0x63884908)
-I (G:\Keil_ARM\ArmPacks\ARM\CMSIS\5.9.0\CMSIS\RTOS2\Include\cmsis_os2.h)(0x626F4ADE)
-I (G:\Keil_ARM\ArmPacks\ARM\CMSIS\5.9.0\CMSIS\RTOS2\RTX\Include\rtx_def.h)(0x626F4ADE)
-I (RTE\_24vatom\RTE_Components.h)(0x65A7BACA)
-I (RTE\CMSIS\RTX_Config.h)(0x65A7BAB0)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g0xx.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g030xx.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\core_cm0plus.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\cmsis_version.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Include\cmsis_armclang.h)(0x65A7BAAF)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\arm_compat.h)(0x63884908)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\arm_acle.h)(0x63884908)
-I (..\Drivers\CMSIS\Include\mpu_armv7.h)(0x65A7BAAF)
-I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\system_stm32g0xx.h)(0x65A7BAAF)
-I (G:\Keil_ARM\ArmPacks\ARM\CMSIS\5.9.0\CMSIS\RTOS2\RTX\Include\rtx_evr.h)(0x626F4ADE)
-F (RTE/CMSIS/RTX_Config.c)(0x65A7CE36)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__RTX -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/CMSIS-I./RTE/_24vatom-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IG:/Keil_ARM/ArmPacks/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include-IG:/Keil_ARM/ArmPacks/Keil/STM32G0xx_DFP/1.4.0/Drivers/CMSIS/Device/ST/STM32G0xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32G030xx -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G030xx-o 24vatom/rtx_config.o -MD)
-I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x65A7BAAF)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\stdint.h)(0x63884908)
-I (..\Drivers\CMSIS\Include\cmsis_armclang.h)(0x65A7BAAF)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\arm_compat.h)(0x63884908)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\arm_acle.h)(0x63884908)
-I (G:\Keil_ARM\ArmPacks\ARM\CMSIS\5.9.0\CMSIS\RTOS2\RTX\Include\rtx_os.h)(0x626F4ADE)
-I (G:\Keil_ARM\ARM\ARMCLANG\include\stddef.h)(0x63884908)
-I (G:\Keil_ARM\ArmPacks\ARM\CMSIS\5.9.0\CMSIS\RTOS2\Include\cmsis_os2.h)(0x626F4ADE)
-I (G:\Keil_ARM\ArmPacks\ARM\CMSIS\5.9.0\CMSIS\RTOS2\RTX\Include\rtx_def.h)(0x626F4ADE)
-I (RTE\_24vatom\RTE_Components.h)(0x65A7BACA)
-I (RTE\CMSIS\RTX_Config.h)(0x65A7BAB0)
-F (RTE/CMSIS/RTX_Config.h)(0x65A7BAB0)()
-F (RTE/Device/STM32G030F6Px/startup_stm32g030xx.s)(0x65A7BAB0)()
-F (RTE/Device/STM32G030F6Px/system_stm32g0xx.c)(0x65A7BAB0)()
+CompilerVersion: 6180000::V6.18::ARMCLANG
+F (startup_stm32g030xx.s)(0x65A37E85)(--target=arm-arm-none-eabi -mcpu=cortex-m0plus -masm=auto -c-gdwarf-4 -Wa,armasm,--pd,"__RTX SETA 1"-I./RTE/CMSIS-I./RTE/_24vatom-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/Keil/STM32G0xx_DFP/1.4.0/Drivers/CMSIS/Device/ST/STM32G0xx/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 537" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"STM32G030xx SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o 24vatom/startup_stm32g030xx.o)
+F (../Core/Src/main.c)(0x65A8C112)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__RTX -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/CMSIS-I./RTE/_24vatom-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/Keil/STM32G0xx_DFP/1.4.0/Drivers/CMSIS/Device/ST/STM32G0xx/Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32G030xx -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G030xx-o 24vatom/main.o -MD)
+I (..\Core\Inc\main.h)(0x65A34F51)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_adc.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g0xx.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g030xx.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Include\core_cm0plus.h)(0x65A34F16)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\stdint.h)(0x625260D8)
+I (..\Drivers\CMSIS\Include\cmsis_version.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Include\cmsis_armclang.h)(0x65A34F16)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\arm_compat.h)(0x6534AA05)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\arm_acle.h)(0x625260D6)
+I (..\Drivers\CMSIS\Include\mpu_armv7.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\system_stm32g0xx.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_rcc.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_bus.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_system.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_exti.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_cortex.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_utils.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_pwr.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_dma.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_dmamux.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_tim.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_gpio.h)(0x65A34F2D)
+I (..\Core\Inc\adc.h)(0x65A78D93)
+I (..\Core\Inc\tim.h)(0x65A8B562)
+I (..\Core\Inc\gpio.h)(0x65A34F50)
+I (C:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\Include\cmsis_os2.h)(0x626F4ADE)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\stddef.h)(0x625260D6)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\string.h)(0x625260D6)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\stdio.h)(0x625260D6)
+I (..\Core\Inc\SEGGER_RTT.h)(0x65A8B562)
+I (..\Core\Inc\SEGGER_RTT_Conf.h)(0x65A8B562)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\stdlib.h)(0x625260D6)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\stdarg.h)(0x625260D8)
+F (../Core/Src/gpio.c)(0x65A34F50)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__RTX -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/CMSIS-I./RTE/_24vatom-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/Keil/STM32G0xx_DFP/1.4.0/Drivers/CMSIS/Device/ST/STM32G0xx/Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32G030xx -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G030xx-o 24vatom/gpio.o -MD)
+I (..\Core\Inc\gpio.h)(0x65A34F50)
+I (..\Core\Inc\main.h)(0x65A34F51)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_adc.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g0xx.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g030xx.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Include\core_cm0plus.h)(0x65A34F16)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\stdint.h)(0x625260D8)
+I (..\Drivers\CMSIS\Include\cmsis_version.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Include\cmsis_armclang.h)(0x65A34F16)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\arm_compat.h)(0x6534AA05)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\arm_acle.h)(0x625260D6)
+I (..\Drivers\CMSIS\Include\mpu_armv7.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\system_stm32g0xx.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_rcc.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_bus.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_system.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_exti.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_cortex.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_utils.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_pwr.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_dma.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_dmamux.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_tim.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_gpio.h)(0x65A34F2D)
+F (../Core/Src/adc.c)(0x65A78DD1)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__RTX -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/CMSIS-I./RTE/_24vatom-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/Keil/STM32G0xx_DFP/1.4.0/Drivers/CMSIS/Device/ST/STM32G0xx/Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32G030xx -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G030xx-o 24vatom/adc.o -MD)
+I (..\Core\Inc\adc.h)(0x65A78D93)
+I (..\Core\Inc\main.h)(0x65A34F51)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_adc.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g0xx.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g030xx.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Include\core_cm0plus.h)(0x65A34F16)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\stdint.h)(0x625260D8)
+I (..\Drivers\CMSIS\Include\cmsis_version.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Include\cmsis_armclang.h)(0x65A34F16)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\arm_compat.h)(0x6534AA05)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\arm_acle.h)(0x625260D6)
+I (..\Drivers\CMSIS\Include\mpu_armv7.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\system_stm32g0xx.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_rcc.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_bus.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_system.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_exti.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_cortex.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_utils.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_pwr.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_dma.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_dmamux.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_tim.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_gpio.h)(0x65A34F2D)
+F (../Core/Src/tim.c)(0x65A8C1CF)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__RTX -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/CMSIS-I./RTE/_24vatom-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/Keil/STM32G0xx_DFP/1.4.0/Drivers/CMSIS/Device/ST/STM32G0xx/Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32G030xx -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G030xx-o 24vatom/tim.o -MD)
+I (..\Core\Inc\tim.h)(0x65A8B562)
+I (..\Core\Inc\main.h)(0x65A34F51)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_adc.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g0xx.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g030xx.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Include\core_cm0plus.h)(0x65A34F16)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\stdint.h)(0x625260D8)
+I (..\Drivers\CMSIS\Include\cmsis_version.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Include\cmsis_armclang.h)(0x65A34F16)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\arm_compat.h)(0x6534AA05)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\arm_acle.h)(0x625260D6)
+I (..\Drivers\CMSIS\Include\mpu_armv7.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\system_stm32g0xx.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_rcc.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_bus.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_system.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_exti.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_cortex.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_utils.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_pwr.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_dma.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_dmamux.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_tim.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_gpio.h)(0x65A34F2D)
+F (../Core/Src/stm32g0xx_it.c)(0x65A36509)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__RTX -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/CMSIS-I./RTE/_24vatom-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/Keil/STM32G0xx_DFP/1.4.0/Drivers/CMSIS/Device/ST/STM32G0xx/Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32G030xx -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G030xx-o 24vatom/stm32g0xx_it.o -MD)
+I (..\Core\Inc\main.h)(0x65A34F51)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_adc.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g0xx.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g030xx.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Include\core_cm0plus.h)(0x65A34F16)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\stdint.h)(0x625260D8)
+I (..\Drivers\CMSIS\Include\cmsis_version.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Include\cmsis_armclang.h)(0x65A34F16)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\arm_compat.h)(0x6534AA05)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\arm_acle.h)(0x625260D6)
+I (..\Drivers\CMSIS\Include\mpu_armv7.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\system_stm32g0xx.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_rcc.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_bus.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_system.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_exti.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_cortex.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_utils.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_pwr.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_dma.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_dmamux.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_tim.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_gpio.h)(0x65A34F2D)
+I (..\Core\Inc\stm32g0xx_it.h)(0x65A34F51)
+F (..\Core\Src\SEGGER_RTT.c)(0x65A8B562)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__RTX -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/CMSIS-I./RTE/_24vatom-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/Keil/STM32G0xx_DFP/1.4.0/Drivers/CMSIS/Device/ST/STM32G0xx/Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32G030xx -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G030xx-o 24vatom/segger_rtt.o -MD)
+I (..\Core\Inc\SEGGER_RTT.h)(0x65A8B562)
+I (..\Core\Inc\SEGGER_RTT_Conf.h)(0x65A8B562)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\stdlib.h)(0x625260D6)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\stdarg.h)(0x625260D8)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\string.h)(0x625260D6)
+F (..\Core\Src\SEGGER_RTT_printf.c)(0x65A8B562)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__RTX -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/CMSIS-I./RTE/_24vatom-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/Keil/STM32G0xx_DFP/1.4.0/Drivers/CMSIS/Device/ST/STM32G0xx/Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32G030xx -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G030xx-o 24vatom/segger_rtt_printf.o -MD)
+I (..\Core\Inc\SEGGER_RTT.h)(0x65A8B562)
+I (..\Core\Inc\SEGGER_RTT_Conf.h)(0x65A8B562)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\stdlib.h)(0x625260D6)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\stdarg.h)(0x625260D8)
+F (../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_utils.c)(0x65A34F2D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__RTX -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/CMSIS-I./RTE/_24vatom-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/Keil/STM32G0xx_DFP/1.4.0/Drivers/CMSIS/Device/ST/STM32G0xx/Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32G030xx -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G030xx-o 24vatom/stm32g0xx_ll_utils.o -MD)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_utils.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g0xx.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g030xx.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Include\core_cm0plus.h)(0x65A34F16)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\stdint.h)(0x625260D8)
+I (..\Drivers\CMSIS\Include\cmsis_version.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Include\cmsis_armclang.h)(0x65A34F16)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\arm_compat.h)(0x6534AA05)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\arm_acle.h)(0x625260D6)
+I (..\Drivers\CMSIS\Include\mpu_armv7.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\system_stm32g0xx.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_rcc.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_system.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_pwr.h)(0x65A34F2D)
+F (../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_exti.c)(0x65A34F2D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__RTX -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/CMSIS-I./RTE/_24vatom-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/Keil/STM32G0xx_DFP/1.4.0/Drivers/CMSIS/Device/ST/STM32G0xx/Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32G030xx -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G030xx-o 24vatom/stm32g0xx_ll_exti.o -MD)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_exti.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g0xx.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g030xx.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Include\core_cm0plus.h)(0x65A34F16)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\stdint.h)(0x625260D8)
+I (..\Drivers\CMSIS\Include\cmsis_version.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Include\cmsis_armclang.h)(0x65A34F16)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\arm_compat.h)(0x6534AA05)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\arm_acle.h)(0x625260D6)
+I (..\Drivers\CMSIS\Include\mpu_armv7.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\system_stm32g0xx.h)(0x65A34F2D)
+F (../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_gpio.c)(0x65A34F2D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__RTX -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/CMSIS-I./RTE/_24vatom-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/Keil/STM32G0xx_DFP/1.4.0/Drivers/CMSIS/Device/ST/STM32G0xx/Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32G030xx -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G030xx-o 24vatom/stm32g0xx_ll_gpio.o -MD)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_gpio.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g0xx.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g030xx.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Include\core_cm0plus.h)(0x65A34F16)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\stdint.h)(0x625260D8)
+I (..\Drivers\CMSIS\Include\cmsis_version.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Include\cmsis_armclang.h)(0x65A34F16)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\arm_compat.h)(0x6534AA05)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\arm_acle.h)(0x625260D6)
+I (..\Drivers\CMSIS\Include\mpu_armv7.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\system_stm32g0xx.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_bus.h)(0x65A34F2D)
+F (../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_adc.c)(0x65A34F2D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__RTX -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/CMSIS-I./RTE/_24vatom-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/Keil/STM32G0xx_DFP/1.4.0/Drivers/CMSIS/Device/ST/STM32G0xx/Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32G030xx -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G030xx-o 24vatom/stm32g0xx_ll_adc.o -MD)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_adc.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g0xx.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g030xx.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Include\core_cm0plus.h)(0x65A34F16)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\stdint.h)(0x625260D8)
+I (..\Drivers\CMSIS\Include\cmsis_version.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Include\cmsis_armclang.h)(0x65A34F16)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\arm_compat.h)(0x6534AA05)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\arm_acle.h)(0x625260D6)
+I (..\Drivers\CMSIS\Include\mpu_armv7.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\system_stm32g0xx.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_bus.h)(0x65A34F2D)
+F (../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_dma.c)(0x65A34F2D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__RTX -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/CMSIS-I./RTE/_24vatom-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/Keil/STM32G0xx_DFP/1.4.0/Drivers/CMSIS/Device/ST/STM32G0xx/Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32G030xx -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G030xx-o 24vatom/stm32g0xx_ll_dma.o -MD)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_dma.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g0xx.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g030xx.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Include\core_cm0plus.h)(0x65A34F16)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\stdint.h)(0x625260D8)
+I (..\Drivers\CMSIS\Include\cmsis_version.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Include\cmsis_armclang.h)(0x65A34F16)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\arm_compat.h)(0x6534AA05)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\arm_acle.h)(0x625260D6)
+I (..\Drivers\CMSIS\Include\mpu_armv7.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\system_stm32g0xx.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_dmamux.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_bus.h)(0x65A34F2D)
+F (../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.c)(0x65A34F2D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__RTX -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/CMSIS-I./RTE/_24vatom-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/Keil/STM32G0xx_DFP/1.4.0/Drivers/CMSIS/Device/ST/STM32G0xx/Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32G030xx -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G030xx-o 24vatom/stm32g0xx_ll_rcc.o -MD)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_rcc.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g0xx.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g030xx.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Include\core_cm0plus.h)(0x65A34F16)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\stdint.h)(0x625260D8)
+I (..\Drivers\CMSIS\Include\cmsis_version.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Include\cmsis_armclang.h)(0x65A34F16)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\arm_compat.h)(0x6534AA05)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\arm_acle.h)(0x625260D6)
+I (..\Drivers\CMSIS\Include\mpu_armv7.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\system_stm32g0xx.h)(0x65A34F2D)
+F (../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_pwr.c)(0x65A34F2D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__RTX -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/CMSIS-I./RTE/_24vatom-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/Keil/STM32G0xx_DFP/1.4.0/Drivers/CMSIS/Device/ST/STM32G0xx/Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32G030xx -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G030xx-o 24vatom/stm32g0xx_ll_pwr.o -MD)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_pwr.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g0xx.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g030xx.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Include\core_cm0plus.h)(0x65A34F16)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\stdint.h)(0x625260D8)
+I (..\Drivers\CMSIS\Include\cmsis_version.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Include\cmsis_armclang.h)(0x65A34F16)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\arm_compat.h)(0x6534AA05)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\arm_acle.h)(0x625260D6)
+I (..\Drivers\CMSIS\Include\mpu_armv7.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\system_stm32g0xx.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_bus.h)(0x65A34F2D)
+F (../Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_tim.c)(0x65A34F2D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__RTX -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/CMSIS-I./RTE/_24vatom-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/Keil/STM32G0xx_DFP/1.4.0/Drivers/CMSIS/Device/ST/STM32G0xx/Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32G030xx -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G030xx-o 24vatom/stm32g0xx_ll_tim.o -MD)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_tim.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g0xx.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g030xx.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Include\core_cm0plus.h)(0x65A34F16)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\stdint.h)(0x625260D8)
+I (..\Drivers\CMSIS\Include\cmsis_version.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Include\cmsis_armclang.h)(0x65A34F16)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\arm_compat.h)(0x6534AA05)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\arm_acle.h)(0x625260D6)
+I (..\Drivers\CMSIS\Include\mpu_armv7.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\system_stm32g0xx.h)(0x65A34F2D)
+I (..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_bus.h)(0x65A34F2D)
+F (../Core/Src/system_stm32g0xx.c)(0x65A34F2D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__RTX -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/CMSIS-I./RTE/_24vatom-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/Keil/STM32G0xx_DFP/1.4.0/Drivers/CMSIS/Device/ST/STM32G0xx/Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32G030xx -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G030xx-o 24vatom/system_stm32g0xx.o -MD)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g0xx.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g030xx.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Include\core_cm0plus.h)(0x65A34F16)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\stdint.h)(0x625260D8)
+I (..\Drivers\CMSIS\Include\cmsis_version.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Include\cmsis_armclang.h)(0x65A34F16)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\arm_compat.h)(0x6534AA05)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\arm_acle.h)(0x625260D6)
+I (..\Drivers\CMSIS\Include\mpu_armv7.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\system_stm32g0xx.h)(0x65A34F2D)
+F (C:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Library/ARM/RTX_CM0.lib)(0x626F4ADE)()
+F (C:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Source/rtx_lib.c)(0x626F4ADE)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__RTX -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/CMSIS-I./RTE/_24vatom-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/Keil/STM32G0xx_DFP/1.4.0/Drivers/CMSIS/Device/ST/STM32G0xx/Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32G030xx -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G030xx-o 24vatom/rtx_lib.o -MD)
+I (C:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\RTX\Include\rtx_os.h)(0x626F4ADE)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\stdint.h)(0x625260D8)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\stddef.h)(0x625260D6)
+I (C:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\Include\cmsis_os2.h)(0x626F4ADE)
+I (C:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\RTX\Include\rtx_def.h)(0x626F4ADE)
+I (RTE\_24vatom\RTE_Components.h)(0x65A364EC)
+I (RTE\CMSIS\RTX_Config.h)(0x65A36528)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g0xx.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g030xx.h)(0x65A34F2D)
+I (..\Drivers\CMSIS\Include\core_cm0plus.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Include\cmsis_version.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Include\cmsis_armclang.h)(0x65A34F16)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\arm_compat.h)(0x6534AA05)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\arm_acle.h)(0x625260D6)
+I (..\Drivers\CMSIS\Include\mpu_armv7.h)(0x65A34F16)
+I (..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\system_stm32g0xx.h)(0x65A34F2D)
+I (C:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\RTX\Include\rtx_evr.h)(0x626F4ADE)
+F (RTE/CMSIS/RTX_Config.c)(0x65A8B562)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__RTX -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Core/Inc -I ../Drivers/STM32G0xx_HAL_Driver/Inc -I ../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I ../Drivers/CMSIS/Include-I./RTE/CMSIS-I./RTE/_24vatom-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/RTX/Include-IC:/Users/Administrator/AppData/Local/Arm/Packs/Keil/STM32G0xx_DFP/1.4.0/Drivers/CMSIS/Device/ST/STM32G0xx/Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32G030xx -D_RTE_ -DUSE_FULL_LL_DRIVER -DHSE_VALUE="8000000" -DHSE_STARTUP_TIMEOUT="100" -DLSE_STARTUP_TIMEOUT="5000" -DLSE_VALUE="32768" -DEXTERNAL_CLOCK_VALUE="12288000" -DHSI_VALUE="16000000" -DLSI_VALUE="32000" -DVDD_VALUE="3300" -DPREFETCH_ENABLE="1" -DINSTRUCTION_CACHE_ENABLE="1" -DDATA_CACHE_ENABLE="1" -DSTM32G030xx-o 24vatom/rtx_config.o -MD)
+I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x65A34F16)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\stdint.h)(0x625260D8)
+I (..\Drivers\CMSIS\Include\cmsis_armclang.h)(0x65A34F16)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\arm_compat.h)(0x6534AA05)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\arm_acle.h)(0x625260D6)
+I (C:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\RTX\Include\rtx_os.h)(0x626F4ADE)
+I (C:\Keil_ARM\ARM\ARMCLANG\include\stddef.h)(0x625260D6)
+I (C:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\Include\cmsis_os2.h)(0x626F4ADE)
+I (C:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\RTX\Include\rtx_def.h)(0x626F4ADE)
+I (RTE\_24vatom\RTE_Components.h)(0x65A364EC)
+I (RTE\CMSIS\RTX_Config.h)(0x65A36528)
+F (RTE/CMSIS/RTX_Config.h)(0x65A36528)()
+F (RTE/Device/STM32G030F6Px/startup_stm32g030xx.s)(0x60D1698C)()
+F (RTE/Device/STM32G030F6Px/system_stm32g0xx.c)(0x60D1698C)()

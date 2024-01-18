@@ -120,18 +120,18 @@ __NO_RETURN void ADC_Read(void *arg)
 		ADC_Value = LL_ADC_REG_ReadConversionData12(ADC1);
 		LL_ADC_ClearFlag_EOS(ADC1);
 		
-		if(ADC_Value == 0)
-		{
-			ADC_Value = 1;
-		}
+//		if(ADC_Value == 0)
+//		{
+//			ADC_Value = 1;
+//		}
 		
 		ADC_Voltage = 3.3 * (float)ADC_Value / 4096;
 		ADC_Current	= ADC_Voltage / 0.25 * 1000;
-		if(ADC_Current > 1600) 
+		if(ADC_Current > 1000) 
 		{
 			TIM1_StopPWM();
 			TIM16_StopPWM();
-			SEGGER_RTT_printf(0, "Stop due to Current %.2f mA\r\n", ADC_Current);
+			//SEGGER_RTT_printf(0, "Stop due to Current %.2f mA\r\n", ADC_Current);
 //		} 
 //		else if(ADC_Current < 20)
 //		{
@@ -144,35 +144,66 @@ __NO_RETURN void ADC_Read(void *arg)
 	}
 }
 
+void bubbleSort(uint16_t arr[], uint8_t n) {
+  uint8_t i, j;
+	float temp;
+	for(i=0; i<n-1; i++) 
+	{
+		for(j=0; j<n-i-1; j++) 
+		{
+			if(arr[j] > arr[j+1]) 
+			{
+				temp = arr[j];
+				arr[j] = arr[j+1];
+				arr[j+1] = temp;
+			}
+		}
+	}
+}
+
 void PZT_Freq_Check(void *arg)
 {
-	__IO uint8_t arr = 0, best_arr = 0;
-	float max_current = 0.0f, current_now = 0.0f, freq_now = 0.0f;
-	SEGGER_RTT_printf(0, "Start PZT_Freq_Check\r\n");
-	for(arr = 35; arr <= 40; arr++)
+	uint8_t best_arr = 0;
+	uint16_t currents[10] = {0};
+	uint16_t max_current = 0;
+	uint16_t current_now = 0;
+	//SEGGER_RTT_printf(0, "Start PZT_Freq_Check\r\n");
+	for(uint8_t arr = 35; arr < 41; arr++)
 	{
-		freq_now = (float)64 / arr;
 		LL_TIM_SetAutoReload(TIM16, arr);
 		osDelay(100);
-		current_now = ADC_Current;
+		for(uint8_t test = 0; test<10; test++) // read adc for 10 times
+		{
+			while(LL_ADC_IsActiveFlag_EOS(ADC1) == RESET) // wait adc conv finish
+			{
+				;
+			}
+			currents[test] = ADC_Value;
+			osDelay(50);
+		}
+		bubbleSort(currents, 10);
+		for(uint8_t test = 2; test< 10; test++)
+		{
+			current_now += currents[test];
+		}
+		current_now /= 8;
 		if(current_now > max_current)
 		{
 			max_current = current_now;
 			best_arr = arr;
 		}
-		//sprintf(sprintf_buf, "arr:%d ,cur:%.2fmA", arr, current_now);
-		//SEGGER_RTT_printf(0, "%s\r\n", sprintf_buf);
+		//SEGGER_RTT_printf(0, "arr:%d ,cur:%d\r\n", arr, current_now);
 	}
 	if(max_current < 500) 
 	{
 		TIM1_StopPWM();
 		TIM16_StopPWM();
-		SEGGER_RTT_printf(0, "PZT_Freq_Check failed,output stopped!\r\n");
+		//SEGGER_RTT_printf(0, "PZT_Freq_Check failed,output stopped!\r\n");
 	}
 	else
 	{
-		SEGGER_RTT_printf(0, "PZT_Freq_Check done\r\n");
-		//SEGGER_RTT_printf(0, "best_arr:%d, max_current:%.2fmA\r\n", best_arr, max_current);
+		//SEGGER_RTT_printf(0, "PZT_Freq_Check done\r\n");
+		//SEGGER_RTT_printf(0, "best_arr:%d, max_current:%d\r\n", best_arr, max_current);
 		LL_TIM_SetAutoReload(TIM16, best_arr);
 		LL_TIM_OC_SetCompareCH1(TIM16, best_arr / 2);
 	}
@@ -183,7 +214,7 @@ void app_main(void *arg)
 	SEGGER_RTT_Init();
 	LED_PWM_ID = osThreadNew(LED_PWM, NULL, &ThreadAttr_LED_PWM);
 	ADC_Read_ID = osThreadNew(ADC_Read, NULL, &ThreadAttr_ADC_Read);
-	PZT_Freq_Check_ID = osThreadNew(PZT_Freq_Check, NULL, &ThreadAttr_PZT_Freq_Check);
+	//PZT_Freq_Check_ID = osThreadNew(PZT_Freq_Check, NULL, &ThreadAttr_PZT_Freq_Check);
 }
 
 /* USER CODE END 0 */
