@@ -55,7 +55,7 @@ void MX_TIM1_Init(void)
   TIM_OC_InitStruct.OCMode = LL_TIM_OCMODE_PWM1;
   TIM_OC_InitStruct.OCState = LL_TIM_OCSTATE_DISABLE;
   TIM_OC_InitStruct.OCNState = LL_TIM_OCSTATE_DISABLE;
-  TIM_OC_InitStruct.CompareValue = 50;
+  TIM_OC_InitStruct.CompareValue = 100;
   TIM_OC_InitStruct.OCPolarity = LL_TIM_OCPOLARITY_HIGH;
   TIM_OC_InitStruct.OCNPolarity = LL_TIM_OCPOLARITY_HIGH;
   TIM_OC_InitStruct.OCIdleState = LL_TIM_OCIDLESTATE_LOW;
@@ -95,6 +95,39 @@ void MX_TIM1_Init(void)
   LL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
 }
+/* TIM3 init function */
+void MX_TIM3_Init(void)
+{
+
+  /* USER CODE BEGIN TIM3_Init 0 */
+
+  /* USER CODE END TIM3_Init 0 */
+
+  LL_TIM_InitTypeDef TIM_InitStruct = {0};
+
+  /* Peripheral clock enable */
+  LL_APB1_GRP1_EnableClock(LL_APB1_GRP1_PERIPH_TIM3);
+
+  /* USER CODE BEGIN TIM3_Init 1 */
+
+  /* USER CODE END TIM3_Init 1 */
+  TIM_InitStruct.Prescaler = 1;
+  TIM_InitStruct.CounterMode = LL_TIM_COUNTERMODE_UP;
+  TIM_InitStruct.Autoreload = 32000-LL_TIM_IC_FILTER_FDIV1_N2;
+  TIM_InitStruct.ClockDivision = LL_TIM_CLOCKDIVISION_DIV1;
+  LL_TIM_Init(TIM3, &TIM_InitStruct);
+  LL_TIM_DisableARRPreload(TIM3);
+  LL_TIM_SetTriggerInput(TIM3, LL_TIM_TS_ITR0);
+  LL_TIM_SetSlaveMode(TIM3, LL_TIM_SLAVEMODE_DISABLED);
+  LL_TIM_DisableIT_TRIG(TIM3);
+  LL_TIM_DisableDMAReq_TRIG(TIM3);
+  LL_TIM_SetTriggerOutput(TIM3, LL_TIM_TRGO_RESET);
+  LL_TIM_DisableMasterSlaveMode(TIM3);
+  /* USER CODE BEGIN TIM3_Init 2 */
+
+  /* USER CODE END TIM3_Init 2 */
+
+}
 /* TIM16 init function */
 void MX_TIM16_Init(void)
 {
@@ -114,9 +147,9 @@ void MX_TIM16_Init(void)
   /* USER CODE BEGIN TIM16_Init 1 */
 
   /* USER CODE END TIM16_Init 1 */
-  TIM_InitStruct.Prescaler = 0;
+  TIM_InitStruct.Prescaler = 8;
   TIM_InitStruct.CounterMode = LL_TIM_COUNTERMODE_UP;
-  TIM_InitStruct.Autoreload = 36;
+  TIM_InitStruct.Autoreload = 3;
   TIM_InitStruct.ClockDivision = LL_TIM_CLOCKDIVISION_DIV1;
   TIM_InitStruct.RepetitionCounter = 0;
   LL_TIM_Init(TIM16, &TIM_InitStruct);
@@ -125,7 +158,7 @@ void MX_TIM16_Init(void)
   TIM_OC_InitStruct.OCMode = LL_TIM_OCMODE_PWM1;
   TIM_OC_InitStruct.OCState = LL_TIM_OCSTATE_DISABLE;
   TIM_OC_InitStruct.OCNState = LL_TIM_OCSTATE_DISABLE;
-  TIM_OC_InitStruct.CompareValue = 18;
+  TIM_OC_InitStruct.CompareValue = 100;
   TIM_OC_InitStruct.OCPolarity = LL_TIM_OCPOLARITY_HIGH;
   TIM_OC_InitStruct.OCNPolarity = LL_TIM_OCPOLARITY_HIGH;
   TIM_OC_InitStruct.OCIdleState = LL_TIM_OCIDLESTATE_LOW;
@@ -159,31 +192,5 @@ void MX_TIM16_Init(void)
 }
 
 /* USER CODE BEGIN 1 */
-void TIM16_StartPWM(void)
-{
-	LL_TIM_CC_EnableChannel(TIM16, LL_TIM_CHANNEL_CH1);
-	LL_TIM_EnableCounter(TIM16);
-	LL_TIM_EnableAllOutputs(TIM16);
-}
 
-void TIM1_StartPWM(void)
-{
-	LL_TIM_CC_EnableChannel(TIM1, LL_TIM_CHANNEL_CH2);
-	LL_TIM_EnableCounter(TIM1);
-	LL_TIM_EnableAllOutputs(TIM1);
-}
-
-void TIM16_StopPWM(void)
-{
-	LL_TIM_CC_DisableChannel(TIM16, LL_TIM_CHANNEL_CH1);
-	LL_TIM_DisableCounter(TIM16);
-	LL_TIM_DisableAllOutputs(TIM16);
-}
-
-void TIM1_StopPWM(void)
-{
-	LL_TIM_CC_DisableChannel(TIM1, LL_TIM_CHANNEL_CH2);
-	LL_TIM_DisableCounter(TIM1);
-	LL_TIM_DisableAllOutputs(TIM1);
-}
 /* USER CODE END 1 */

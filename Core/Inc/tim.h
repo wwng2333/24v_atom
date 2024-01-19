@@ -37,13 +37,11 @@ extern "C" {
 /* USER CODE END Private defines */
 
 void MX_TIM1_Init(void);
+void MX_TIM3_Init(void);
 void MX_TIM16_Init(void);
 
 /* USER CODE BEGIN Prototypes */
-void TIM16_StartPWM(void);
-void TIM1_StartPWM(void);
-void TIM16_StopPWM(void);
-void TIM1_StopPWM(void);
+
 /* USER CODE END Prototypes */
 
 #ifdef __cplusplus
