@@ -1,0 +1,20 @@
+--cpu Cortex-M0+
+"24vatom\startup_stm32g030xx.o"
+"24vatom\main.o"
+"24vatom\gpio.o"
+"24vatom\adc.o"
+"24vatom\tim.o"
+"24vatom\stm32g0xx_it.o"
+"24vatom\stm32g0xx_ll_utils.o"
+"24vatom\stm32g0xx_ll_exti.o"
+"24vatom\stm32g0xx_ll_gpio.o"
+"24vatom\stm32g0xx_ll_adc.o"
+"24vatom\stm32g0xx_ll_dma.o"
+"24vatom\stm32g0xx_ll_rcc.o"
+"24vatom\stm32g0xx_ll_pwr.o"
+"24vatom\stm32g0xx_ll_tim.o"
+"24vatom\system_stm32g0xx.o"
+--strict --scatter "24vatom\24vatom.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "24vatom.map" -o 24vatom\24vatom.axf

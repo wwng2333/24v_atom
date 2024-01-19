@@ -51,6 +51,7 @@ Mcu.UserConstants=
 Mcu.UserName=STM32G030F6Px
 MxCube.Version=6.9.1
 MxDb.Version=DB.6.0.91
+NVIC.ADC1_IRQn=true\:0\:0\:false\:false\:true\:true\:true\:true
 NVIC.ForceEnableDMAVector=true
 NVIC.HardFault_IRQn=true\:0\:0\:false\:false\:true\:false\:false\:false
 NVIC.NonMaskableInt_IRQn=true\:0\:0\:false\:false\:true\:false\:false\:false
