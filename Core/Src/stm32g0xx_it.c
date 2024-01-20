@@ -22,6 +22,9 @@
 #include "stm32g0xx_it.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+//#include "SEGGER_RTT.h"
+#include "stdio.h"
+#include "tim.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -96,42 +99,42 @@ void HardFault_Handler(void)
 /**
   * @brief This function handles System service call via SWI instruction.
   */
-//void SVC_Handler(void)
-//{
-//  /* USER CODE BEGIN SVC_IRQn 0 */
+void SVC_Handler(void)
+{
+  /* USER CODE BEGIN SVC_IRQn 0 */
 
-//  /* USER CODE END SVC_IRQn 0 */
-//  /* USER CODE BEGIN SVC_IRQn 1 */
+  /* USER CODE END SVC_IRQn 0 */
+  /* USER CODE BEGIN SVC_IRQn 1 */
 
-//  /* USER CODE END SVC_IRQn 1 */
-//}
+  /* USER CODE END SVC_IRQn 1 */
+}
 
 /**
   * @brief This function handles Pendable request for system service.
   */
-//void PendSV_Handler(void)
-//{
-//  /* USER CODE BEGIN PendSV_IRQn 0 */
+void PendSV_Handler(void)
+{
+  /* USER CODE BEGIN PendSV_IRQn 0 */
 
-//  /* USER CODE END PendSV_IRQn 0 */
-//  /* USER CODE BEGIN PendSV_IRQn 1 */
+  /* USER CODE END PendSV_IRQn 0 */
+  /* USER CODE BEGIN PendSV_IRQn 1 */
 
-//  /* USER CODE END PendSV_IRQn 1 */
-//}
+  /* USER CODE END PendSV_IRQn 1 */
+}
 
 /**
   * @brief This function handles System tick timer.
   */
-//void SysTick_Handler(void)
-//{
-//  /* USER CODE BEGIN SysTick_IRQn 0 */
+void SysTick_Handler(void)
+{
+  /* USER CODE BEGIN SysTick_IRQn 0 */
 
-//  /* USER CODE END SysTick_IRQn 0 */
+  /* USER CODE END SysTick_IRQn 0 */
 
-//  /* USER CODE BEGIN SysTick_IRQn 1 */
+  /* USER CODE BEGIN SysTick_IRQn 1 */
 
-//  /* USER CODE END SysTick_IRQn 1 */
-//}
+  /* USER CODE END SysTick_IRQn 1 */
+}
 
 /******************************************************************************/
 /* STM32G0xx Peripheral Interrupt Handlers                                    */
@@ -139,6 +142,28 @@ void HardFault_Handler(void)
 /* For the available peripheral interrupt handler names,                      */
 /* please refer to the startup file (startup_stm32g0xx.s).                    */
 /******************************************************************************/
+
+/**
+  * @brief This function handles ADC1 interrupt.
+  */
+void ADC1_IRQHandler(void)
+{
+  /* USER CODE BEGIN ADC1_IRQn 0 */
+	if(LL_ADC_IsActiveFlag_AWD1(ADC1))
+	{
+		TIM16_StopPWM();
+		TIM1_StopPWM();
+		printf("ADC1_AWD1:%d\r\n", LL_ADC_REG_ReadConversionData12(ADC1));
+	}
+	else if(LL_ADC_IsActiveFlag_EOC(ADC1))
+	{
+		printf("ADC1_EOC:%d\r\n", LL_ADC_REG_ReadConversionData12(ADC1));
+	}
+  /* USER CODE END ADC1_IRQn 0 */
+  /* USER CODE BEGIN ADC1_IRQn 1 */
+
+  /* USER CODE END ADC1_IRQn 1 */
+}
 
 /* USER CODE BEGIN 1 */
 

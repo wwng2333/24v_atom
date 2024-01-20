@@ -24,10 +24,9 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include <cmsis_os2.h>
-#include "string.h"
-#include "stdio.h"
 #include "SEGGER_RTT.h"
+#include "stdio.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -48,6 +47,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -58,164 +58,6 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-osThreadId_t app_main_ID, LED_PWM_ID, ADC_Read_ID, PZT_Freq_Check_ID;
-uint16_t ADC_Value;
-float ADC_Voltage = 0.0f;
-float ADC_Current = 0.0f;
-char sprintf_buf[48] = {0};
-
-static const osThreadAttr_t ThreadAttr_app_main =
-    {
-        .name = "app_main",
-        .priority = (osPriority_t)osPriorityNormal,
-        .stack_size = 256};
-
-static const osThreadAttr_t ThreadAttr_LED_PWM =
-    {
-        .name = "LED_PWM",
-        .priority = (osPriority_t)osPriorityNormal,
-        .stack_size = 128};
-
-static const osThreadAttr_t ThreadAttr_ADC_Read =
-    {
-        .name = "ADC_Read",
-        .priority = (osPriority_t)osPriorityNormal,
-        .stack_size = 256};
-
-static const osThreadAttr_t ThreadAttr_PZT_Freq_Check =
-    {
-        .name = "PZT_Freq_Check",
-        .priority = (osPriority_t)osPriorityNormal,
-        .stack_size = 256};
-		
-__NO_RETURN void LED_PWM(void *arg)
-{
-	uint8_t i = 0;
-	while(1)
-	{
-		for(i=0;i<50;i++)
-		{
-			LL_TIM_OC_SetCompareCH2(TIM1, i);
-			osDelay(50);
-		}
-		osDelay(1000);
-		for(i=50;i>0;i--)
-		{
-			LL_TIM_OC_SetCompareCH2(TIM1, i);
-			osDelay(50);
-		}
-		osDelay(1000);
-	}
-}
-
-__NO_RETURN void ADC_Read(void *arg)
-{
-	while(1)
-	{
-		LL_ADC_REG_StartConversion(ADC1);
-		while(LL_ADC_IsActiveFlag_EOS(ADC1) == RESET)
-		{
-			osDelay(10);
-		}
-		ADC_Value = LL_ADC_REG_ReadConversionData12(ADC1);
-		LL_ADC_ClearFlag_EOS(ADC1);
-		
-//		if(ADC_Value == 0)
-//		{
-//			ADC_Value = 1;
-//		}
-		
-		ADC_Voltage = 3.3 * (float)ADC_Value / 4096;
-		ADC_Current	= ADC_Voltage / 0.25 * 1000;
-		if(ADC_Current > 1000) 
-		{
-			TIM1_StopPWM();
-			TIM16_StopPWM();
-			//SEGGER_RTT_printf(0, "Stop due to Current %.2f mA\r\n", ADC_Current);
-//		} 
-//		else if(ADC_Current < 20)
-//		{
-//			LL_TIM_CC_EnableChannel(TIM16, LL_TIM_CHANNEL_CH1);
-//			LL_TIM_EnableCounter(TIM16);
-//			LL_TIM_CC_EnableChannel(TIM1, LL_TIM_CHANNEL_CH2);
-//			LL_TIM_EnableCounter(TIM1);
-		}
-		osDelay(25);
-	}
-}
-
-void bubbleSort(uint16_t arr[], uint8_t n) {
-  uint8_t i, j;
-	float temp;
-	for(i=0; i<n-1; i++) 
-	{
-		for(j=0; j<n-i-1; j++) 
-		{
-			if(arr[j] > arr[j+1]) 
-			{
-				temp = arr[j];
-				arr[j] = arr[j+1];
-				arr[j+1] = temp;
-			}
-		}
-	}
-}
-
-void PZT_Freq_Check(void *arg)
-{
-	uint8_t best_arr = 0;
-	uint16_t currents[10] = {0};
-	uint16_t max_current = 0;
-	uint16_t current_now = 0;
-	//SEGGER_RTT_printf(0, "Start PZT_Freq_Check\r\n");
-	for(uint8_t arr = 35; arr < 41; arr++)
-	{
-		LL_TIM_SetAutoReload(TIM16, arr);
-		osDelay(100);
-		for(uint8_t test = 0; test<10; test++) // read adc for 10 times
-		{
-			while(LL_ADC_IsActiveFlag_EOS(ADC1) == RESET) // wait adc conv finish
-			{
-				;
-			}
-			currents[test] = ADC_Value;
-			osDelay(50);
-		}
-		bubbleSort(currents, 10);
-		for(uint8_t test = 2; test< 10; test++)
-		{
-			current_now += currents[test];
-		}
-		current_now /= 8;
-		if(current_now > max_current)
-		{
-			max_current = current_now;
-			best_arr = arr;
-		}
-		//SEGGER_RTT_printf(0, "arr:%d ,cur:%d\r\n", arr, current_now);
-	}
-	if(max_current < 500) 
-	{
-		TIM1_StopPWM();
-		TIM16_StopPWM();
-		//SEGGER_RTT_printf(0, "PZT_Freq_Check failed,output stopped!\r\n");
-	}
-	else
-	{
-		//SEGGER_RTT_printf(0, "PZT_Freq_Check done\r\n");
-		//SEGGER_RTT_printf(0, "best_arr:%d, max_current:%d\r\n", best_arr, max_current);
-		LL_TIM_SetAutoReload(TIM16, best_arr);
-		LL_TIM_OC_SetCompareCH1(TIM16, best_arr / 2);
-	}
-}
-
-void app_main(void *arg)
-{
-	SEGGER_RTT_Init();
-	LED_PWM_ID = osThreadNew(LED_PWM, NULL, &ThreadAttr_LED_PWM);
-	ADC_Read_ID = osThreadNew(ADC_Read, NULL, &ThreadAttr_ADC_Read);
-	//PZT_Freq_Check_ID = osThreadNew(PZT_Freq_Check, NULL, &ThreadAttr_PZT_Freq_Check);
-}
 
 /* USER CODE END 0 */
 
@@ -226,6 +68,7 @@ void app_main(void *arg)
 int main(void)
 {
   /* USER CODE BEGIN 1 */
+
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -245,7 +88,7 @@ int main(void)
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
-	//LL_ADC_DeInit(ADC1);
+
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
@@ -254,15 +97,12 @@ int main(void)
   MX_TIM16_Init();
   MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
+	SEGGER_RTT_Init();
+	SEGGER_RTT_printf(0, "Hello world!\r\n");
 	Activate_ADC();
+	LL_ADC_REG_StartConversion(ADC1);
 	TIM16_StartPWM();
 	TIM1_StartPWM();
-	osKernelInitialize();
-  app_main_ID = osThreadNew(app_main, NULL, &ThreadAttr_app_main);
-  if (osKernelGetState() == osKernelReady)
-  {
-    osKernelStart();
-  }
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -320,7 +160,9 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-
+int stdout_putchar (int ch) {
+  return (SEGGER_RTT_PutChar(0, ch));
+}
 /* USER CODE END 4 */
 
 /**

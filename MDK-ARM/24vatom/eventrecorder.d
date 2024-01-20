@@ -1,6 +1,6 @@
-24vatom/stm32g0xx_ll_tim.o: \
-  ..\Drivers\STM32G0xx_HAL_Driver\Src\stm32g0xx_ll_tim.c \
-  ..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_tim.h \
+24vatom/eventrecorder.o: \
+  G:\Keil_ARM\ArmPacks\Keil\ARM_Compiler\1.7.2\Source\EventRecorder.c \
+  RTE\_24vatom\RTE_Components.h \
   ..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g0xx.h \
   ..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\stm32g030xx.h \
   ..\Drivers\CMSIS\Include\core_cm0plus.h \
@@ -12,4 +12,8 @@
   G:\Keil_ARM\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
   ..\Drivers\CMSIS\Include\mpu_armv7.h \
   ..\Drivers\CMSIS\Device\ST\STM32G0xx\Include\system_stm32g0xx.h \
-  ..\Drivers\STM32G0xx_HAL_Driver\Inc\stm32g0xx_ll_bus.h
+  G:\Keil_ARM\ARM\ARMCLANG\Bin\..\include\string.h \
+  G:\Keil_ARM\ArmPacks\Keil\ARM_Compiler\1.7.2\Include\EventRecorder.h \
+  RTE\Compiler\EventRecorderConf.h \
+  G:\Keil_ARM\ArmPacks\ARM\CMSIS\5.9.0\CMSIS\RTOS2\Include\cmsis_os2.h \
+  G:\Keil_ARM\ARM\ARMCLANG\Bin\..\include\stddef.h
